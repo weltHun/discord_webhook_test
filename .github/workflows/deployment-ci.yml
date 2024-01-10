@@ -13,11 +13,7 @@ jobs:
         with:
           webhook: https://discord.com/api/webhooks/1194525313250631690/5plhcYAU6BqpofXUZTFi_WXoPeOAlkmM5b-KilBCgbnbdn-TO1DSANQQgYYw1HLaVW6X
           status: ${{ job.status }}
-          content: "Hey <@316911818725392384>"
-          title: "deploy"
-          description: "Build and deploy to GitHub Pages"
-          image: ${{ secrets.EMBED_IMAGE }}
+          title: "build"
+          description: "Succeeded build workflow"
           color: 0x0000ff
-          url: "https://github.com/sarisia/actions-status-discord"
           username: GitHub Actions
-          avatar_url: ${{ secrets.AVATAR_URL }}
