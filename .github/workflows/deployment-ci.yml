@@ -13,5 +13,5 @@ jobs:
           DISCORD_WEBHOOK: https://discord.com/api/webhooks/1194525313250631690/5plhcYAU6BqpofXUZTFi_WXoPeOAlkmM5b-KilBCgbnbdn-TO1DSANQQgYYw1HLaVW6X
         uses: Ilshidur/action-discord@master
         with:
-          args: 'Action called: {{ GITHUB_ACTION }} as {{ EVENT_PAYLOAD }}'
+          args: 'Action called: {{ job.status }}'
         if: always()
