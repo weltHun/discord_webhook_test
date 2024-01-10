@@ -1,0 +1,17 @@
+name: test workflow
+
+on:
+  push:
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Discord notification
+        env:
+          DISCORD_WEBHOOK: https://discord.com/api/webhooks/1194525313250631690/5plhcYAU6BqpofXUZTFi_WXoPeOAlkmM5b-KilBCgbnbdn-TO1DSANQQgYYw1HLaVW6X
+        uses: Ilshidur/action-discord@master
+        with:
+          args: 'The project {{ EVENT_PAYLOAD.repository.full_name }} has been deployed.'
+        if: always()
